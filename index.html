@@ -1,0 +1,1332 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        h1,
+        h2 {
+            font-family: "Berkshire Swash", serif;
+        }
+        .overlay-open {
+            display: block !important;
+        }
+        .offcanvas-open {
+            display: block !important;
+        }
+        .contact-open {
+            display: block !important;
+        }
+        .swiper-pagination-bullet-active {
+            background: #F83D8E;
+        }
+        .swiper-pagination-bullet {
+            width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 13px));
+            height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 13px));
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+    <!-- navbar section -->
+    <nav class="pt-8 absolute top-0 left-0 right-0">
+        <div class="max-w-[1500px] mx-auto px-8 sm:px-10 md:px-10 lg:px-10">
+            <div class="flex items-center justify-between">
+                <div class="logo">
+                    <img class="max-width[100]" src="images/menu-logo.png" alt="">
+                </div>
+                <div class="hidden sm:hidden md:hidden lg:flex">
+                    <ul class="flex md:flex items-center lg:gap-4 xl:gap-8">
+                        <li class="relative group z-50">
+                            <a href=""
+                                class="text-[16px] text-[#0f0200] font-normal leading-[16px] transition-all hover:text-[#f83d8e]">
+                                Home<i class="fa fa-sort-desc ml-2 transform translate-y-[-3px]" aria-hidden="true"></i>
+                            </a>
+                            <ul
+                                class="py-3 absolute left-0 opacity-0 top-[120%] invisible w-48 bg-white shadow-lg transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 top-full">
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Home 01
+                                    </a>
+                                </li>
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Home 02
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="text-[16px] text-[#0f0200] font-normal leading-[16px] transition-all hover:text-[#f83d8e]">
+                                About Us
+                            </a>
+                        </li>
+                        <li class="relative group z-50">
+                            <a href=""
+                                class="text-[16px] text-[#0f0200] font-normal leading-[16px] transition-all hover:text-[#f83d8e]">
+                                Pages<i class="fa fa-sort-desc ml-2 transform translate-y-[-3px]"
+                                    aria-hidden="true"></i>
+                            </a>
+                            <ul
+                                class="py-3 absolute left-0 opacity-0 top-[120%] invisible w-48 bg-white shadow-lg transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 top-full">
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Services
+                                    </a>
+                                </li>
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Services Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="relative group z-50">
+                            <a href=""
+                                class="text-[16px] text-[#0f0200] font-normal leading-[16px] transition-all hover:text-[#f83d8e]">
+                                Blog<i class="fa fa-sort-desc ml-2 transform translate-y-[-3px]" aria-hidden="true"></i>
+                            </a>
+                            <ul
+                                class="py-3 absolute left-0 opacity-0 top-[120%] invisible w-48 bg-white shadow-lg transition-opacity duration-300 ease-in-out group-hover:visible group-hover:opacity-100 top-full">
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Blog
+                                    </a>
+                                </li>
+                                <li class="drop">
+                                    <a href="#"
+                                        class="pl-3 block py-2 text-[16px] text-[#0f0200] font-normal leading-[16px] hover:text-[#f83d8e]">
+                                        Blog Details
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href=""
+                                class="text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 transition-all duration-300 hover:text-[#f83d8e]">Faq's</a>
+                        </li>
+                    </ul>
+                    <div class="flex md:flex items-center">
+                        <div class="search-icon cursor-pointer ml-3">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                        <div class="pl-[35px] relative">
+                            <a href="">
+                                <img class="max-width[100%]" src="images/header-cart.png.png" alt="" srcset="">
+                            </a>
+                            <div
+                                class="absolute text-center text-[10px] bottom-[-4px] left-[50px] w-[20px] h-[20px] rounded-full bg-[#683292] text-white leading-[20px] text-center">
+                                1
+                            </div>
+                        </div>
+                        <div class="pl-[35px] hidden lg:block">
+                            <a
+                                class="bg-[#F83D8E] px-8 py-3 mr-6 duration-[1000ms] transition-all hover:shadow-xl items-center rounded-[30px] cursor-pointer text-[#FFFFFF] capitalize text-[16px] inline-flex">
+                                Contact Us<img class="max-width[100%] ml-2" src="images/arrow.png" alt="" srcset="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex sm:flex md:flex lg:hidden">
+                    <div class="mr-[20px] mt-[4px] relative">
+                        <a href="">
+                            <img class="max-width[100%]" src="images/header-cart.png.png" alt="" srcset="">
+                        </a>
+                        <div
+                            class="absolute text-center text-[10px] bottom-[-6px] left-[7px] w-[20px] h-[20px] rounded-full bg-[#683292] text-white leading-[20px] text-center">
+                            1
+                        </div>
+                    </div>
+                    <button class="toogle-btn">
+                        <i class="fa fa-bars text-[20px] sm:text-[35px]" aria-hidden="true" class="bg-white"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- contact-form section -->
+    <div class="contact text-center hidden fixed top-0 left-0 right-0 bg-white py-28" style="z-index: 9999;">
+        <h2 class="text-[38px]">What are you looking for?</h2>
+        <form action="#" class="relative w-[500px] mx-auto">
+            <input type="text" placeholder="Search Here*"
+                class="w-[500px] p-4 border-0 border-b border-black-100 text-[20px] uppercase focus:border-b border-black-100 focus:outline-none">
+            <button type="submit" class="absolute right-5 top-6"><i class="fa fa-search"
+                    aria-hidden="true"></i></button>
+        </form>
+        <div class="absolute top-5 right-5 close">
+            <i class="fa fa-times text-[30px] cursor-pointer" aria-hidden="true"></i>
+        </div>
+    </div>
+    <!-- offcanvas section -->
+    <div class="offcanvas hidden overflow-y-scroll fixed top-0 right-0 w-[100%] sm:w-[60%] h-full bg-white" style="z-index: 9999;">
+        <div class="absolute top-6 right-6 close">
+            <i class="fa fa-times text-[30px] cursor-pointer" aria-hidden="true"></i>
+        </div>
+        <div class="pl-5 pt-10">
+            <img class="max-w-full" src="images/menu-logo.png" alt="" srcset="">
+        </div>
+        <ul class="block pt-[40px] mx-5">
+            <li class="py-3 border-0 border-b">
+                <a href=""
+                    class="main-menu flex items-center justify-between text-[16px] text-[#0f0200] font-normal transition-all ease-in-out duration-300 leading-[16px] px-3 hover:text-[red]">Home
+                    <i class="fa fa-angle-down w-[30px] h-[30px] border leading-[30px] text-center" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-dropdown hidden block ml-7">
+                    <li class="border-0 border-b pt-2 pb-2"><a class="text-[16px]" href="">Home 01</a></li>
+                    <li class="pt-2 pb-2"><a class="text-[16px]" href="">Home 02</a></li>
+                </ul>
+            </li>
+            <li class="py-3 border-0 border-b">
+                <a href="" class="text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 hover:text-[red]">About
+                    Us</a>
+            </li>
+            <li class="py-3 border-0 border-b">
+                <a href="" class="main-menu flex items-center justify-between text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 hover:text-[red]">Pages
+                    <i class="fa fa-angle-down w-[30px] h-[30px] border leading-[30px] text-center" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-dropdown hidden  block ml-3">
+                    <li class="border-0 border-b pt-2 pb-2"><a class="text-[16px]" href="">Services</a></li>
+                    <li class="pt-2 pb-2"><a class="text-[16px]" href="">Services Details</a></li>
+                </ul>
+            </li>
+            <li class="py-3 border-0 border-b">
+                <a href="" class="main-menu flex items-center justify-between text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 hover:text-[red]">Blog
+                    <i class="fa fa-angle-down w-[30px] h-[30px] border leading-[30px] text-center" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-dropdown hidden  block ml-3">
+                    <li class="border-0 border-b pt-2 pb-2"><a class="text-[16px]" href="">Blog</a></li>
+                    <li class="pt-2 pb-2"><a class="text-[16px]" href="">Blog Details</a></li>
+                </ul>
+            </li>
+            <li class="py-3 border-0 border-b">
+                <a href="" class="text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 hover:text-[red]">Faq's</a>
+            </li>
+            <li class="py-3 border-0 border-b">
+                <a href="" class="text-[16px] text-[#0f0200] font-normal leading-[16px] px-3 hover:text-[red]">Contact</a>
+            </li>
+        </ul>
+        <div class="pt-3 ml-5">
+            <h3 class="text-[#0a0e1a] text-[30px] font-bold py-2">Contact Info</h3>
+            <span><a class="text-[#222] text-[17px]" href="#">+ 4 20 7700 1007</a></span><br>
+            <span><a class="text-[#222] text-[17px]" href="#">hello@exdos.com</a></span><br>
+            <span><a class="text-[#222] text-[17px]" href="#">Avenue de Roma 158b, Lisboa</a></span>
+        </div>
+    </div>
+
+    <!-- overlay section -->
+    <div class="overlay fixed top-0 left-0 right-0 w-full h-full hidden bg-[#683292] z-50"
+        style="background: rgba(24, 24, 24, 0.6);">
+    </div>
+    <!-- banner section -->
+    <section
+        class="py-[150px] sm:py-[75] md:py-[75] lg:py-20 px-9 banner bg-[url('images/header-background.png')] bg-cover bg-center">
+        <div class="container max-w-[1500px] mx-auto">
+            <div class="flex flex-col sm:flex-col md:flex-col lg:flex-row gap-3 items-center">
+                <div class="items-center hero-content">
+                    <h2 class="text-[40px] font-normal leading-[40px] text-[#212529] pb-3">
+                        <i class="w-[64px] h-[3px] inline-block bg-[#683292] -translate-y-2"></i>Welcome to The
+                    </h2>
+                    <h1
+                        class="max-w-[842px] text-[70px] sm:text-[70px] md:text-[70px] xl:text-[112px] leading-[96%] font-normal leading-[112px] text-[#212529]">
+                        Discover <span class="text-[#F83D8E]">Sweet</span> Delights!
+                    </h1>
+                    <p class="max-w-[560px] text-[22px] font-normal leading-[30px] text-[#0F0200] pt-8">
+                        Relish the timeless taste of handcrafted ice cream, made with passion and the finest
+                        ingredients.</p>
+                    <div class="btn flex items-center pt-7">
+                        <a
+                            class="bg-[#683292] px-7 py-5 items-center rounded-[30px] cursor-pointer text-[#FFFFFF] capitalize text-[16px] inline-flex border border-transparent duration-[1000ms] transition-all hover:bg-[#f83d8e]">Browse
+                            Our Classic Flavors<img class="max-width[100%] ml-2 transform translate-y-0"
+                                src="images/arrow.png" alt="" srcset=""></a>
+                    </div>
+                </div>
+                <div class="mt-8 sm:mt-8 md:mt-8 headline hero-img">
+                    <img src="images/banner-img.png" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- relive section -->
+    <section
+        class="relive py-[50px] md:py-[50px] lg:pt-[170px] lg:pb-[0px] xl:pt-[170px] xl:pb-[0px] 2xl:pt-[170px] 2xl:pb-[0px] relative">
+        <div>
+            <img class="max-width[100%] hidden md:block absolute right-0 bottom-[-15px]"
+                src="images/relive-rightbottomimage.png.png" alt="" srcset="">
+        </div>
+        <div class="container max-w-[1500px] mx-auto relative pr-5 pl-5 sm:pl-32 md:pl-32">
+            <div>
+                <div>
+                    <img class="hidden md:block absolute right-4 top-24" src="images/relive-triangle.png" alt=""
+                        srcset="">
+                </div>
+                <div>
+                    <img class="hidden md:block absolute left-3 bottom-[226px]" src="images/relive-circle.png.png"
+                        alt="" srcset="">
+                </div>
+            </div>
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-9">
+                <div class="relative relive-img">
+                    <img class="pic1" src="images/relive-image.png" alt="">
+                    <div>
+                        <img class="max-width[100%] hidden md:block absolute top-16 right-10"
+                            src="images/relive-doted.png.png" alt="" srcset="">
+                    </div>
+                    <div
+                        class="w-[200px] h-[200px] sm:w-[457px] sm:h-[457px] md:w-[457px] md:h-[457px] lg:w-[450px] lg:h-[450px] xl:w-[550px] xl:h-[550px] rounded-full bg-[#f6f3f9] absolute bottom-[50px] sm:bottom-1 left-0 -z-10">
+                    </div>
+                </div>
+                <div class="flex items-center relative sm:pl-0 sm:pt-5 relive-text">
+                    <div>
+                        <img class="max-width[100] absolute right-2" src="images/relive-triangle.png.png" alt="">
+                    </div>
+                    <div>
+                        <h1
+                            class="max-w-[700px] text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] leading-[120%] font-normal">
+                            Relive the Sweet Memories of
+                            Classic
+                            <span class="text-[#F83D8E]">Ice Creams</span>
+                        </h1>
+                        <p class="max-w-[460px] py-6">From rich chocolate fudge to creamy vanilla sundaes, discover our
+                            menu of classic ice cream creations.</p>
+                        <div class="pt-3 md:pt-0">
+                            <a
+                                class="bg-[#F83D8E] px-7 py-5 duration-[1000ms] transition-all hover:shadow-xl items-center rounded-[30px] cursor-pointer text-[#FFFFFF] capitalize text-[16px] inline-flex">
+                                Explore
+                                Our Menu <img class="max-width[100%] ml-2" src="images/arrow.png" alt="" srcset=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our-classic section -->
+    <section class="our-classic py-28 relative"
+        style="background: linear-gradient(337deg, #efd7ef 8%, #f5f9fc 43%, #f8eae1 64%, #eaf8f9 87%);">
+        <div>
+            <div class="hidden md:block">
+                <img class="absolute left-0 top-24" src="images/classic-leftimage.png" alt="" srcset="">
+            </div>
+            <div class="hidden md:block">
+                <img class="absolute right-0 bottom-24" src="images/classic-rightimage.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="max-w-[1500px] mx-auto relative our-section">
+            <div class="text-center pb-6">
+                <h1 class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] font-normal leading-[120%]">Our
+                    <span class="text-[#F83D8E]">Classic</span> Favorites
+                </h1>
+                <p class="text-[20px]">Check out our top products that our customers love.</p>
+            </div>
+            <div class="grid grid-cols-12">
+                <div class="col-span-10 col-start-2 text-center pl-[10px] pr-[10px]">
+                    <div class="swiper mySwiper classic">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Chocolate
+                                                Chip <br>
+                                                Cookie
+                                                Cone</h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Chocolate
+                                            chip cookie
+                                            dough
+                                            <br>
+                                            ice cream in a cone.
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$4.49</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-2.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Rocky
+                                                Road
+                                                <br>Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Marshmallow
+                                            and nutty
+                                            rocky <br>
+                                            road ice cream
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.69</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-3.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Peach
+                                                Melba
+                                                <br>Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Peach ice
+                                            cream topped
+                                            with <br>
+                                            raspberry sauce
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.39</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-4.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Strawberry
+                                                <br>Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Strawberry
+                                            ice cream
+                                            with <br>
+                                            fresh strawberries</p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.99</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Chocolate
+                                                Chip <br>
+                                                Cookie
+                                                Cone</h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Chocolate
+                                            chip cookie
+                                            dough
+                                            <br>
+                                            ice cream in a cone.
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$4.49</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 pt-3 rounded-[20px]">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-2.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Rocky
+                                                Road
+                                                <br>Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Marshmallow
+                                            and nutty
+                                            rocky <br>
+                                            road ice cream
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.69</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination static pt-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- explore section -->
+    <section class="explore py-28">
+        <div class="container max-w-[1500px] mx-auto px-6 md:px-8 explore-section">
+            <div class="text-center">
+                <h1 class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] leading-[120%]">Explore Our <span
+                        class="text-[#F83D8E]">Categories</span></h1>
+                <p class="text-[20px] font-normal leading-[26px] pt-5 pb-10">Browse through our different categories to
+                    find your favorite ice cream treats.</p>
+            </div>
+            <div class="grid grid-cols-12 mt-9 gap-3">
+                <div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="relative rounded-[16px] group overflow-hidden">
+                        <div class="image-container">
+                            <img class="w-full max-w-full cursor-pointer transform transition duration-300 ease-in-out group-hover:scale-110"
+                                src="images/categories-1.jpg">
+                        </div>
+                        <div
+                            class="absolute w-[90%] max-w-[327px] bottom-3 left-1/2 transform -translate-x-1/2 rounded-[16px]">
+                            <a href="#"
+                                class="rounded-[16px] bg-white px-4 py-5 flex justify-between items-center text-lg font-bold text-[#212529] leading-6 sm:text-[22px] sm:leading-[22px]">
+                                Sundaes
+                                <i class="fa fa-arrow-right w-[46px] h-[46px] rounded-full bg-[#F83D8E] text-center leading-[46px] text-white"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="relative rounded-[16px] group overflow-hidden">
+                        <div class="image-container">
+                            <img class="w-full max-w-full cursor-pointer transform transition duration-300 ease-in-out group-hover:scale-110"
+                                src="images/categories-2.jpg">
+                        </div>
+                        <div
+                            class="absolute w-[90%] max-w-[327px] bottom-3 left-1/2 transform -translate-x-1/2 rounded-[16px]">
+                            <a href="#"
+                                class="rounded-[16px] bg-white px-4 py-5 flex justify-between items-center text-lg font-bold text-[#212529] leading-6 sm:text-[22px] sm:leading-[22px]">
+                                Ice Cream Cones
+                                <i class="fa fa-arrow-right w-[46px] h-[46px] rounded-full bg-[#F83D8E] text-center leading-[46px] text-white"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="relative rounded-[16px] group overflow-hidden">
+                        <div class="image-container">
+                            <img class="w-full max-w-full cursor-pointer transform transition duration-300 ease-in-out group-hover:scale-110"
+                                src="images/categories-3.jpg">
+                        </div>
+                        <div
+                            class="absolute w-[90%] max-w-[327px] bottom-3 left-1/2 transform -translate-x-1/2 rounded-[16px]">
+                            <a href="#"
+                                class="rounded-[16px] bg-white px-4 py-5 flex justify-between items-center text-lg font-bold text-[#212529] leading-6 sm:text-[22px] sm:leading-[22px]">
+                                Milkshakes
+                                <i class="fa fa-arrow-right w-[46px] h-[46px] rounded-full bg-[#F83D8E] text-center leading-[46px] text-white"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-12 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3">
+                    <div class="relative rounded-[16px] group overflow-hidden">
+                        <div class="image-container">
+                            <img class="w-full max-w-full cur transform transition duration-300 ease-in-out group-hover:scale-110"
+                                src="images/categories-4.jpg">
+                        </div>
+                        <div
+                            class="absolute w-[90%] max-w-[327px] bottom-3 left-1/2 transform -translate-x-1/2 rounded-[16px]">
+                            <a href="#"
+                                class="rounded-[16px] bg-white px-4 py-5 flex justify-between items-center text-lg font-bold text-[#212529] leading-6 sm:text-[22px] sm:leading-[22px]">
+                                Seasonal Flavors
+                                <i class="fa fa-arrow-right w-[46px] h-[46px] rounded-full bg-[#F83D8E] text-center leading-[46px] text-white"
+                                    aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- summer section -->
+    <section class="summer bg-[#683292] py-28 relative">
+        <div>
+            <img class="hidden xl:block max-width[100%] absolute right-0 top-24 z-[2]"
+                src="images/special-rightimage.png" alt="" srcset="">
+            <img class="hidden xl:block max-width[100%] absolute left-[116px] bottom-[249px]"
+                src="images/special-doted.png" alt="" srcset="">
+        </div>
+        <div class="container max-w-[1500px] mx-auto px-4 summer-section">
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-3 items-center">
+                <div class="items-center pl-[10px] sm:pl-36 relative">
+                    <div>
+                        <img class="hidden xl:block max-width[100%] absolute left-[10px] top-[180px]"
+                            src="images/special-triangle.png" alt="">
+                    </div>
+                    <h1
+                        class="max-w-[397px] text-[63px] sm:text-[70px] md:text-[70px] xl:text-[112px] leading-[96%] font-normal text-[#ffff]">
+                        Summer
+                        Special!
+                    </h1>
+                    <p class="text-[30px] font-normal leading-[30px] text-[#ffff] pt-8">Buy One Sundae, Get One 50% Off!
+                    </p>
+                    <div class="btn md:block block sm:block lg:block xl:flex items-center pt-7">
+                        <a
+                            class="bg-[#F83D8E] px-7 py-3 items-center rounded-[30px] cursor-pointer text-[#FFFFFF] capitalize text-[16px] inline-flex border border-transparent transition duration-300 ease-in hover:shadow-xl">
+                            Get
+                            This Deal<img class="max-width[100%] ml-2" src="images/arrow.png" alt="" srcset=""></a>
+                        <p class="text-[16px] font-normal leading-[16px] text-[#ffff] ml-5 pt-4 md:pt-0">Use code:
+                            SUMMER50 at
+                            checkout.</p>
+                    </div>
+                </div>
+                <div class="pt-8 sm:pt-8">
+                    <img class="max-width[100%]" src="images/summer-food.png" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ourbest section -->
+    <section class="py-28 ourbest">
+        <div class="max-w-[1500px] mx-auto px-4 best">
+            <div class="text-center pb-6">
+                <h1 class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] leading-[120%]">Our <span
+                        class="text-[#F83D8E]">Best</span> Sellers</h1>
+                <p class="text-[20px]">Discover the favorites that keep our customers coming back for more.</p>
+            </div>
+            <div class="grid grid-cols-12">
+                <div class="col-span-10 col-start-2 text-center pl-[10px] pr-[10px]">
+                    <!-- Swiper -->
+                    <div class="swiper mySwiper best-sellers">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Chocolate
+                                                Chip <br>
+                                                Cookie
+                                                Cone</h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Chocolate
+                                            chip cookie
+                                            dough <br>
+                                            ice cream in a cone.
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$4.49</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Rocky
+                                                Road <br>
+                                                Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Marshmallow
+                                            and nutty
+                                            rocky <br>
+                                            road ice cream
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.69</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Peach
+                                                Melba <br>
+                                                Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Peach ice
+                                            cream topped
+                                            with <br>
+                                            raspberry sauce
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.39</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Strawberry <br>
+                                                Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Strawberry
+                                            ice cream
+                                            with <br>
+                                            fresh strawberries</p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.99</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Chocolate
+                                                Chip <br>
+                                                Cookie
+                                                Cone</h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Chocolate
+                                            chip cookie
+                                            dough <br>
+                                            ice cream in a cone.
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$4.49</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="bg-[white] px-3 py-3 rounded-[20px]"
+                                    style="box-shadow: inset 0 2px 73px 2px rgba(0, 0, 0, 0.05);">
+                                    <div class="relative">
+                                        <div>
+                                            <img class="w-full block ml-auto mr-auto rounded-[10px]"
+                                                src="images/sellers-1.jpg" alt="" srcset="">
+                                        </div>
+                                        <div class="absolute top-[10px] left-2">
+                                            <i class="fa fa-heart-o w-[46px] h-[46px] leading-[45px] bg-[#fff] rounded-full text-center"
+                                                aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                    <div class="content mx-3 py-4">
+                                        <div class="hearde flex justify-between">
+                                            <h3 class="text-[20px] text-[#0F0200] font-bold leading-[24px] text-start">
+                                                Rocky
+                                                Road <br>
+                                                Sundae
+                                            </h3>
+                                            <p class="text-[14px] text-[#0F0200] leading-[16px] pt-1.5"><i
+                                                    class="fa fa-star text-[#FBAB2A] mr-1" aria-hidden="true"></i>4.5/5
+                                            </p>
+                                        </div>
+                                        <p class="text-[#646464] text-[16px] leading-[24px] font-normal text-start">
+                                            Marshmallow
+                                            and nutty
+                                            rocky <br>
+                                            road ice cream
+                                        </p>
+                                        <div class="dollar flex justify-between pt-2">
+                                            <span>$5.69</span> <span><i
+                                                    class="fa fa-shopping-cart cursor-pointer text-white w-[46px] h-[46px] rounded-full bg-[#683292] transform translate-y-[-11px] leading-[40px]"
+                                                    aria-hidden="true"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination static pt-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hear section -->
+    <section class="hear py-[150px]"
+        style="background: linear-gradient(157deg, #efd7ef 8%, #f5f9fc 40%, #f8eae1 66%, #eaf8f9 91%);">
+        <div class="container max-w-[1500px] mx-auto relative px-4 hear-section">
+            <div>
+                <img class="max-width[100%] absolute top-[112px] left-[20px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image1.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[162px] left-[190px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image3.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[282px] left-[0px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image2.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[322px] left-[190px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image4.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[122px] right-[190px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image5.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[202px] right-[0px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image6.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[302px] right-[190px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image7.png" alt="" srcset="">
+                <img class="max-width[100%] absolute top-[362px] right-[320px] hidden sm:hidden md:hidden lg:hidden xl:block 2xl:block"
+                    src="images/testimonial-image8.png" alt="" srcset="">
+            </div>
+            <div class="pb-[50px]">
+                <h1
+                    class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] font-normal leading-[120%] font-[Berkshire Swash] text-center">
+                    Hear from Our
+                    <span class="text-[#F83D8E]">Happy <br> Ice Cream</span> Lovers
+                </h1>
+            </div>
+            <div class="grid grid-cols-12 mt-9">
+                <div class="col-span-12 sm:col-span-6 col-start-0 sm:col-start-4 text-center relative">
+                    <div class="hidden xl:block">
+                        <img class="max-width[100%] absolute top-[-89px] left-[226px]"
+                            src="images/testimonial-quoteimage.png" alt="" srcset="">
+                    </div>
+                    <div class="swiper mySwiper testimonial">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <p
+                                        class="max-w-[748px] text-justify sm:text-justify md:text-justify lg:text-center mx-auto">
+                                        Beatae vitae dicta sunt explicabo. Nemo
+                                        enim ipsam
+                                        voluptatem quia voluptas as
+                                        pernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do
+                                        euismod
+                                        tempor incidunt. Labore et dolore magna aliqua ut enim ad minim adipiscing elit,
+                                        sed
+                                        do euismod tempor incidunt aut labore.
+                                    </p>
+                                    <div class="content text-center pt-[50px]">
+                                        <h6 class="text-[18px] font-bold text-[#F83D8E]">Kevin Andrew</h6>
+                                        <span class="text-[14px] font-normal">Happy Customer</span>
+                                        <div class="star">
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <p
+                                        class="max-w-[748px] text-justify sm:text-justify md:text-justify lg:text-center mx-auto">
+                                        Beatae vitae dicta sunt explicabo. Nemo
+                                        enim ipsam
+                                        voluptatem quia voluptas as
+                                        pernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do
+                                        euismod
+                                        tempor incidunt. Labore et dolore magna aliqua ut enim ad minim adipiscing elit,
+                                        sed
+                                        do euismod tempor incidunt aut labore.
+                                    </p>
+                                    <div class="content text-center pt-[50px]">
+                                        <h6 class="text-[18px] font-bold text-[#F83D8E]">Kevin Andrew</h6>
+                                        <span class="text-[14px] font-normal">Happy Customer</span>
+                                        <div class="star">
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <p
+                                        class="max-w-[748px] text-justify sm:text-justify md:text-justify lg:text-center mx-auto">
+                                        Beatae vitae dicta sunt explicabo. Nemo
+                                        enim ipsam
+                                        voluptatem quia voluptas as
+                                        pernatur aut odit aut fugit, sed beatae vitae dicta ripiscing elit, sed do
+                                        euismod
+                                        tempor incidunt. Labore et dolore magna aliqua ut enim ad minim adipiscing elit,
+                                        sed
+                                        do euismod tempor incidunt aut labore.
+                                    </p>
+                                    <div class="content text-center pt-[50px]">
+                                        <h6 class="text-[18px] font-bold text-[#F83D8E]">Kevin Andrew</h6>
+                                        <span class="text-[14px] font-normal">Happy Customer</span>
+                                        <div class="star">
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                            <i class="fa fa-star text-[#FBAB2A] text-[12px]" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination static"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- sign-up section -->
+    <section class="sign-up py-20 sm:py-36">
+        <div class="mx-auto max-w-[1440px] relative px-4 sign-section">
+            <div>
+                <div>
+                    <img class="hidden xl:block absolute right-4 top-20 hidden sm:hidden md:hidden lg:block"
+                        src="images/relive-triangle.png" alt="" srcset="">
+                    <img class="hidden xl:block absolute left-32 lg:bottom-28 hidden sm:hidden md:hidden lg:block"
+                        src="images/relive-circle.png.png" alt="" srcset="">
+                </div>
+            </div>
+            <div>
+                <div class="text-center">
+                    <h1 class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] leading-[120%]">Sign up For
+                        <span class="text-[#F83D8E]">Exclusive
+                            Deals</span><br>and
+                        Updates
+                    </h1>
+                    <p class="text-[20px] text-[#646464] leading-[26px] py-4">JGet 10% off your next order and stay
+                        updated with our latest offers.</p>
+                </div>
+                <div class="text-center">
+                    <form action="">
+                        <div class="flex flex-wrap justify-center">
+                            <div class="mr-2 mb-3 sm:mb-3">
+                                <input type="email" placeholder="Enter Your Email Address"
+                                    class="w-[250px] sm:w-[520px] border px-4 py-3 rounded-[30px] shadow-slate-500 focus:border-blue-100 focus:outline-none" />
+                            </div>
+                            <div>
+                                <button type="submit"><a
+                                        class="bg-[#F83D8E] px-7 py-3 items-center rounded-[30px] text-[#FFFFFF] capitalize text-[16px] inline-flex border border-transparent transition duration-300 ease-in hover:shadow-xl">
+                                        Subscribe<img class="max-width[100%] ml-2" src="images/arrow.png" alt=""
+                                            srcset=""></a></button>
+                            </div>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="" id="" class="my-5">
+                            <span>I agree to the <span class="text-[#F83D8E]">Privacy Policy</span></span>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- follow-us section -->
+    <div class="follow-us relative py-36"
+        style="background: linear-gradient(340deg, #efd7ef 8%, #f5f9fc 43%, #f8eae1 64%, #eaf8f9 87%);">
+        <div class="max-w-[1500px] mx-auto relative px-4 sm:px-4 md:px-5 xl:px-4 instagram">
+            <div>
+                <div
+                    class="hidden md:block w-[129px] h-[129px] rounded-full bg-[#F83D8E] absolute top-[187px] left-[2px]">
+                </div>
+                <div
+                    class="hidden md:block w-[129px] h-[129px] rounded-full bg-[#683292] absolute bottom-[-48px] right-[2px]">
+                </div>
+            </div>
+            <div class="text-center">
+                <h1 class="text-[50px] sm:text-[50px] md:text-[50px] xl:text-[60px] leading-[120%]">Follow Us on <span
+                        class="text-[#F83D8E]">Instagram</span></h1>
+                <p class="text-[20px] text-[#646464] font-normal leading-[26px] pt-5 pb-10">Join our Instagram community
+                    for updates, special deals, and more!</p>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative">
+                    <div class="ms-3">
+                        <img class="rounded-[20px]" class="max-width[100]" src="images/instagram-1.jpg" alt=""
+                            srcset="">
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="ms-3">
+                        <img class="rounded-[20px]" class="max-width[100]" src="images/instagram-2.jpg" alt=""
+                            srcset="">
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="ms-3">
+                        <img class="rounded-[20px]" class="max-width[100]" src="images/instagram-3.jpg" alt=""
+                            srcset="">
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="ms-3">
+                        <img class="rounded-[20px]" class="max-width[100]" src="images/instagram-4.jpg" alt=""
+                            srcset="">
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="ms-3">
+                        <img class="rounded-[20px]" class="max-width[100]" src="images/instagram-5.jpg" alt=""
+                            srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer section -->
+    <section class="footer bg-[#683292] py-32 relative">
+        <div class="absolute top-3 left-0 hidden xl:block hidden sm:hidden md:hidden lg:block">
+            <img class="max-width[100%]" src="images/footer-image.png.png" alt="" srcset="">
+        </div>
+        <div class="max-w-[1500px] mx-auto px-8 footer-section">
+            <div
+                class="block sm:block md:flex flex-wrap sm:justify-start md:justify-center lg:justify-center xl:justify-center 2xl:justify-center gap-7">
+                <div class="mr-3">
+                    <img class="max-width[100]" src="images/footer-logo.png" alt="" srcset="">
+                </div>
+                <div class="mr-3">
+                    <h6 class="text-[22px] text-white leading-[22px]">Navigation</h6>
+                    <div class="flex flex-wrap gap-6 pt-3">
+                        <ul>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">Home</a></li>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">About</a></li>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">Services</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">Products</a></li>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">Blog</a></li>
+                            <li><a class="text-[#cfb6e2] cursor-pointer hover:text-[#ffffff] hover:underline"
+                                    href="">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mr-3 my-4 md:my-0">
+                    <div class="flex">
+                        <div class="mr-4">
+                            <i class="fa fa-map-marker text-white w-[46px] h-[46px] leading-[45px] bg-[rgba(255,255,255,0.1)] rounded-full text-center"
+                                aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-[16px] leading-[16px] font-bold">Address:</h3>
+                            <p class="text-[#cfb6e2] text-[14px] leading-[20px] pt-3">121 King Street Melbourne, 3000,
+                                <br>
+                                Australia
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex mt-3">
+                        <div class="mr-4">
+                            <i class="fa fa-envelope text-white w-[46px] h-[46px] leading-[45px] bg-[rgba(255,255,255,0.1)] rounded-full text-center"
+                                aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-[16px] leading-[16px] font-bold">Email:</h3>
+                            <p class="text-[#cfb6e2] text-[14px] leading-[20px] pt-3">info@example.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="flex">
+                        <div class="mr-3">
+                            <i class="fa fa-phone text-white text-[30px] leading-[30px] font-black"
+                                aria-hidden="true"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-[20px] leading-[20px] font-bold">+123456780123:</h3>
+                            <p class="text-[#cfb6e2] text-[14px] leading-[20px] pt-3">Got Questions? Call us 24/7</p>
+                            <div class="pt-2">
+                                <a href="" class="text-white text-[16px] leading-[46px] font-normal mr-2">
+                                    <i class="fa fa-facebook w-[46px] h-[46px] leading-[45px] bg-[rgba(255,255,255,0.1)] rounded-full text-center hover:bg-white hover:text-[#683292] transition duration-300"
+                                        aria-hidden="true"></i></a>
+                                <a href="" class="text-white text-[16px] leading-[46px] font-normal mr-2"><i
+                                        class="fa fa-instagram w-[46px] h-[46px] leading-[45px] bg-[rgba(255,255,255,0.1)] rounded-full text-center hover:bg-white hover:text-[#683292] transition duration-300"
+                                        aria-hidden="true"></i></a>
+                                <a href="" class="text-white text-[16px] leading-[46px] font-normal"><i
+                                        class="fa fa-linkedin w-[46px] h-[46px] leading-[45px] bg-[rgba(255,255,255,0.1)] rounded-full text-center hover:bg-white hover:text-[#683292] transition duration-300"
+                                        aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>     
+</body>
+
+<!-- Swiper JS -->
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="js/main.js"></script>
+
+
+<!-- best-sellers swiper-->
+<script>
+    var swiper = new Swiper(".best-sellers", {
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1536: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+<!-- classic  swiper-->
+<script>
+    var swiper = new Swiper(".classic", {
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            350: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1280: {
+                slidesPerView: 3,
+                spaceBetween: 50,
+            },
+            1536: {
+                slidesPerView: 4,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+<!-- testimonial Swiper -->
+<script>
+    var swiper = new Swiper(".testimonial", {
+        slidesPerView: 1,
+        keyboard: {
+            enabled: true,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+
+</html>
