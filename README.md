@@ -1,6 +1,6 @@
 # Icecream-Website
 
- .5 homepages
+ 5 homepages
  .12 additional pages
  .slider with swiper js
  .Bottom-to-top scroll animation
